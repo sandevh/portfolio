@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "title": "Sinhala Note Summarizer",
+      "description": "Built a mobile app to summarize Sinhala notes using image text extraction and AI-powered summarization.",
+      "techStack": "React Native, Python Flask, Gemini API, Tesseract OCR, CI/CD(GitHub Actions), Docker",
+      "link": "https://github.com/sandevh/sinhala-note-summarization-application"
+    },
+    {
+      "title": "Event Ticketing Simulator",
+      "description": "Developed a real-time ticket transaction system simulating producer-consumer patterns with multithreading.",
+      "techStack": "Spring Boot, Java, React, MySQL",
+      "link": "https://github.com/sandevh/real-time-event-ticketing-system"
+    },
+    {
+      "title": "Estate Agent Platform",
+      "description": "Created a feature-rich estate management system with persistent data storage in the browser.",
+      "techStack": "React",
+      "link": "https://github.com/sandevh/estate-agent"
+    },
+    {
+      "title": "Student Management System",
+      "description": "Developed a Student and their module management system using core Java",
+      "techStack": "Java, JavaFX",
+      "link": "https://github.com/sandevh/student-management-system"
+    },
+    {
+      "title": "Personal Finance Tracker",
+      "description": "Developed a python CLI and Tkinter GUI application for tracking personal finances.",
+      "techStack": "Python, Tkinter",
+      "link": "#"
+    },
+    {
+      "title": "SDG-Themed Website",
+      "description": "Designed a website promoting Sustainable Development Goals with interactive features and modern styling.",
+      "techStack": "HTML, CSS, JavaScript",
+      "link": "#"
+    }
+  ]
+}
