@@ -378,6 +378,8 @@ export default function Portfolio() {
                       'TypeScript',
                       'React',
                       'Next.js',
+                      'Node.js',
+                      'Express.js',
                       'React Native',
                       'Spring Boot',
                       'Git',
