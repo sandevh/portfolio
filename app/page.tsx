@@ -289,7 +289,7 @@ export default function Portfolio() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
-                  href="/cv.pdf"
+                  href="/SandevHettiarachchi.pdf"
                   download
                   className="bg-blue-600 text-white px-6 py-3 rounded-full text-base font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-center w-full sm:w-auto"
                 >
