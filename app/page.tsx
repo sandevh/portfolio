@@ -10,6 +10,7 @@ import LinkedinIcon from "./icons/LinkedinIcon";
 import LeetCodeIcon from "./icons/LeetCodeIcon";
 import ScrollToTopIcon from "./icons/ScrollToTopIcon";
 import BackgroundPattern from "./components/BackgroundPattern";
+
 // Interfaces 
 interface SocialLink {
   name: string;
@@ -504,7 +505,7 @@ export default function Portfolio() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={contactInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                action={`mailto:sandevhettiarachchi@gmail.com`}
+                // action={`mailto:sandevhettiarachchi@gmail.com`}
                 method="POST"
                 encType="text/plain"
                 className="space-y-4"
