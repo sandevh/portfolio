@@ -503,13 +503,42 @@ export default function Portfolio() {
                 initial={{ y: 20, opacity: 0 }}
                 animate={contactInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                action="mailto:sandevhettiarachchi@gmail.com"
-                encType="text/plain"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 className="space-y-4"
               >
+                <input type="hidden" name="form-name" value="contact" />
+                <p className="sr-only">
+                  <label>
+                    Don&apos;t fill this out if you&apos;re human: <input name="bot-field" autoComplete="off" />
+                  </label>
+                </p>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                  <input
+                    type="text"
+                    name="name"
+                    autoComplete="name"
+                    placeholder="Your name"
+                    className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500 shadow-sm"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    placeholder="Your email"
+                    className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500 shadow-sm"
+                    required
+                  />
+                </div>
+
                 <textarea
                   name="message"
                   placeholder="Type your message..."
+                  autoComplete="off"
                   className="w-full p-4 rounded-xl border border-gray-300 dark:border-gray-600 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-800 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-32 transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500 shadow-sm"
                   required
                 ></textarea>
