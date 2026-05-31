@@ -53,7 +53,7 @@ export default function Portfolio() {
   // Active Section Detection on Scroll 
   const handleScroll = useCallback(() => {
     if (isScrolling) return;
-    
+
     const sections = ["home", "about", "projects", "contact"];
     const scrollPosition = window.scrollY + 150;
 
@@ -73,7 +73,7 @@ export default function Portfolio() {
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
     window.addEventListener("scroll", handleScroll);
-    
+
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
       window.removeEventListener("scroll", handleScroll);
@@ -100,20 +100,20 @@ export default function Portfolio() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsScrolling(true);
-    
+
     const targetId = href.replace("#", "");
     const targetElement = document.getElementById(targetId);
-    
+
     if (targetElement) {
       // Set active link immediately to prevent flicker
       setActiveLink(href);
-      
+
       // Close mobile menu if open
       setMenuOpen(false);
-      
+
       // Scroll to the element
       targetElement.scrollIntoView({ behavior: "smooth" });
-      
+
       // Reset isScrolling after animation completes (typical smooth scroll takes ~1s)
       setTimeout(() => {
         setIsScrolling(false);
@@ -176,11 +176,10 @@ export default function Portfolio() {
               key={index}
               href={link.href}
               onClick={(e) => scrollToSection(e, link.href)}
-              className={`relative font-bold transition-colors duration-300 text-md group ${
-                activeLink === link.href
+              className={`relative font-bold transition-colors duration-300 text-md group ${activeLink === link.href
                   ? "text-blue-600 dark:text-blue-600 after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-0 after:w-1 after:h-1 after:bg-blue-600 dark:after:bg-blue-600 after:rounded-full"
                   : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-              }`}
+                }`}
             >
               {link.name}
             </a>
@@ -203,11 +202,10 @@ export default function Portfolio() {
                     key={index}
                     href={link.href}
                     onClick={(e) => scrollToSection(e, link.href)}
-                    className={`relative font-bold transition-colors duration-300 text-md group ${
-                      activeLink === link.href
+                    className={`relative font-bold transition-colors duration-300 text-md group ${activeLink === link.href
                         ? "text-blue-600 dark:text-blue-600 border-b-2 border-blue-600 dark:border-blue-400"
                         : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </a>
@@ -234,7 +232,7 @@ export default function Portfolio() {
         <BackgroundPattern />
         <header className="sticky top-0 z-50 shadow-md bg-white/90 dark:bg-black/90 backdrop-blur-md transition-all duration-300">
           <div className="flex justify-between items-center py-4 px-4 md:px-8 max-w-7xl mx-auto">
-            <a 
+            <a
               href="#home"
               onClick={(e) => scrollToSection(e, "#home")}
               className="text-xl sm:text-2xl font-bold tracking-tight hover:scale-105 transition-transform duration-300"
@@ -257,11 +255,11 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
             className="min-h-[calc(100vh-80px)] flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 scroll-mt-20 dark:bg-black dark:text-white gap-8 lg:gap-12"
           >
-            <motion.div 
+            <motion.div
               className="max-w-4xl w-full mx-auto z-1"
-              initial={{ y: 30, opacity: 0 }} 
-              animate={homeInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }} 
-              transition={{ duration: 0.7, delay: 0.2 }} 
+              initial={{ y: 30, opacity: 0 }}
+              animate={homeInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
             >
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 text-center lg:text-left leading-tight">
                 Hi, I&apos;m{' '}
@@ -411,10 +409,10 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
             className="min-h-[calc(100vh-80px)] flex items-center justify-center px-4 py-16 scroll-mt-20 dark:bg-black dark:text-white"
           >
-            
+
             <div className="max-w-5xl w-full relative z-10">
               <SectionTitle>Projects</SectionTitle>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {projects.map((project, index) => (
                   <motion.div
@@ -469,11 +467,11 @@ export default function Portfolio() {
             transition={{ duration: 0.5 }}
             className="min-h-[calc(100vh-80px)] flex items-center justify-center px-4 py-16 scroll-mt-20 dark:bg-black dark:text-white"
           >
-            
+
             <div className="text-center max-w-2xl w-full relative z-10">
               <SectionTitle>Let&apos;s Connect</SectionTitle>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ y: 20, opacity: 0 }}
                 animate={contactInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
@@ -483,7 +481,7 @@ export default function Portfolio() {
               </motion.p>
 
               {/* Contact details */}
-              <motion.div 
+              <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={contactInView ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
@@ -523,7 +521,7 @@ export default function Portfolio() {
                   Send Message
                 </button>
               </motion.form>
-              
+
               {/* Social links */}
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
@@ -561,8 +559,8 @@ export default function Portfolio() {
                   <ul className="space-y-2">
                     {navLinks.map((link, index) => (
                       <li key={index}>
-                        <a 
-                          href={link.href} 
+                        <a
+                          href={link.href}
                           className="hover:text-blue-600 dark:hover:text-blue-500 transition-colors duration-300 group flex items-center"
                         >
                           <span className="w-0 h-0.5 bg-blue-500 transition-all duration-300 mr-0 group-hover:w-3 group-hover:mr-2"></span>
@@ -572,7 +570,7 @@ export default function Portfolio() {
                     ))}
                   </ul>
                 </div>
-                
+
                 {/* Social Links */}
                 <div className="flex flex-col items-center">
                   <h3 className="text-lg md:text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">
@@ -594,7 +592,7 @@ export default function Portfolio() {
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Name and Copyright */}
                 <div className="text-center md:text-right">
                   <h3 className="text-lg md:text-xl font-bold mb-2 hover:scale-105 transition-transform duration-300">
@@ -610,7 +608,7 @@ export default function Portfolio() {
           </div>
         </footer>
       </div>
-      
+
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {isVisible && (
